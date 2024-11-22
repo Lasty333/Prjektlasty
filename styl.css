@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2c2c2c;
+    color: #f4f4f4;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+header {
+    background-color: #1a1a1a;
+    padding: 20px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 25px;
+}
+
+nav ul li a {
+    color: #f4f4f4;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    background-color: #0e6dd1;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    color: white;
+}
+.domu {
+    border-bottom: 3px solid #007bff;
+    color: #007bff;
+    filter: contrast(110%) brightness(110%);
+}
+
+.ja {
+    max-width: 800px;
+    margin: 30px auto;
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+.prejit {
+    max-width: 1000px;
+    margin: 50px auto;
+    background-color: #2c2c2c;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 2 2px 15px rgba(0, 0, 0, 0.5) ;
+    text-align: center;
+}
+.omne-tlacitko {
+    background: #007bff;
+    color: white;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 40px;
+    margin-left: 880px;
+}
+.omne-tlacitko:hover {
+    filter: brightness(120%) contrast(85%);
+    background-color: #184175;
+    color: #cccaca;
+}
+
+.tlacitko-div {
+    margin-bottom: 30px;
+}
+
+
+
+h1 {
+    color: #007bff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #007bff;
+    margin-top: 30px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+h3 {
+    color: #007bff;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+strong {
+    color: #007bff;
+}
+
+.section strong {
+    color: #007bff;
+    text-transform: uppercase;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #1a1a1a;
+    margin-top: auto; 
+    width: 100%;
+}
+
+footer p {
+    color: #f4f4f4;
+}
+.pozadi {
+    background-image: url('/img/konech.jpg');
+}
+.video {
+    margin-left: 40%;
+}
+
+/* Hamburgerové menu */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0px;
+    transition: all 0.3s ease;
+}
+
+/* Stylování skrytí checkboxu */
+#menu-toogle {
+    display: none;
+}
+
+/* Zobrazení menu při zaškrtnutí checkboxu */
+#menu-toogle:checked + .hamburger + #nav-list {
+    display: block;
+}
+
+@media (min-width: 750px) {
+    .hamburger {
+        display: none; /* Skrytí hamburger menu na desktopu */
+    }
+}
+
+.hudbazajmy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.kokos {
+    padding: 15px 20px;
+    font-size: 1.1em;
+}
+
+/* Responsivita */
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    nav ul {
+        list-style-type: none;
+        display: flex;
+    }
+    
+    nav ul li {
+        margin: 0 25px;
+    }
+    
+    nav ul li a {
+        color: #f4f4f4;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 10px;
+    }
+    
+    nav ul li a:hover {
+        background-color: #0e6dd1;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        text-decoration: none;
+        color: white;
+    }
+
+    .ja {
+        padding: 25px;
+    }
+    .domu {
+        border-bottom: 3px solid #007bff;
+        color: #007bff;
+        filter: contrast(110%) brightness(110%);
+    }
+}
+
+/* Telefon */
+@media (max-width: 480px) {
+    body {
+        font-size: 16px;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+        margin-top: 20px;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+    .domu {
+        border-bottom: none;
+    }
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        position: absolute;
+        right: 15px;
+        top: 5px;
+    }
+    .hamburger span {
+        width: 30px;
+        height: 3px;
+        background-color: #0e6dd1;
+        margin: 4px 0px;
+        transition: all 0.3s ease;
+    }
+
+    /* Stylování skrytí checkboxu */
+    #menu-toogle {
+        display: none;
+    }
+
+    /* Zobrazení menu při zaškrtnutí checkboxu */
+    #menu-toogle:checked + .hamburger + #nav-list {
+        display: inline-block;
+    }
+    nav ul {
+        display: none;
+    }
+}
+
+/* Animace a přechody */
+.ja {
+    transition: transform 0.5s ease;
+}
+
+.ja:hover {
+    transform: scale(1.01);
+}
+
+.section {
+    padding: 20px;
+    margin: 20px 0;
+    background: #333;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.section h2 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.section p {
+    color: #f4f4f4;
+}
+
+.zajmyjo {
+    text-transform: uppercase;
+    padding-top: 10px;
+}
+
+.ja {
+    padding: 30px;
+}
+
